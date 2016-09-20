@@ -130,7 +130,8 @@ object Fields {
       displayHint = apiContent.fields.flatMap(_.displayHint).getOrElse(""),
       isLive = apiContent.fields.flatMap(_.liveBloggingNow).getOrElse(false),
       sensitive = apiContent.fields.flatMap(_.sensitive),
-      legallySensitive = apiContent.fields.flatMap(_.legallySensitive)
+      legallySensitive = apiContent.fields.flatMap(_.legallySensitive),
+      lang = apiContent.fields.flatMap(_.lang)
     )
   }
 }
@@ -147,7 +148,8 @@ final case class Fields(
   displayHint: String,
   isLive: Boolean,
   sensitive: Option[Boolean],
-  legallySensitive: Option[Boolean]
+  legallySensitive: Option[Boolean],
+  lang: Option[String]
 ){
   lazy val shortUrlId = shortUrl.replaceFirst("^[a-zA-Z]+://gu.com", "") //removing scheme://gu.com
 
