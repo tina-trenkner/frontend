@@ -39,7 +39,7 @@ define([
             .fail(function (resp) {
                 if (resp.status === 0) {
                     // reqwest wasn't able to make the request
-                    reject(new Error('Fetch error: ' + resp.statusText));
+                    reject(new Error('Fetch error: ' + input + ' / ' + resp.statusText));
                 } else {
                     // an error response was received, in fetch this is not a rejection
                     resolve(createResponse(resp));
