@@ -95,7 +95,7 @@ define([
             for(var f in props){
                 if(props[f] === true) { out.push(f); }
             }
-            return out.join(" ");
+            return out.join(' ');
         },
 
         render: function () {
