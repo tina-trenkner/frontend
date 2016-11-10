@@ -1,5 +1,4 @@
 define([
-    'classnames',
     'react',
     './helpers',
     './constants',
@@ -9,7 +8,6 @@ define([
     'lodash/collections/map',
     'lodash/objects/assign'
 ], function (
-    classNames,
     React,
     helpers,
     constants,
@@ -92,6 +90,14 @@ define([
             }
         },
 
+        classNames : function(props) {
+            var out = [];
+            for(var f in props){
+                if(props[f] === true) { out.push(f); }
+            }
+            return out.join(" ");
+        },
+
         render: function () {
             var width = helpers.gridSize(this.props.columns);
             var height = helpers.gridSize(this.props.rows);
@@ -122,7 +128,7 @@ define([
             return React.createElement(
                 'svg', {
                     viewBox: '0 0 ' + width + ' ' + height,
-                    className: classNames({
+                    className: this.classNames({
                         'crossword__grid': true,
                         'crossword__grid--focussed': !!this.props.focussedCell
                     })

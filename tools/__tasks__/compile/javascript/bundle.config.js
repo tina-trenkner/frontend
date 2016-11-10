@@ -17,7 +17,6 @@
         Promise: 'components/when/Promise',
         qwery: 'components/qwery/qwery',
         raven: 'components/raven-js/raven',
-        classnames: 'components/classnames/index',
         reqwest: 'components/reqwest/reqwest',
         svgs: '../../../common/conf/assets/inline-svgs',
 

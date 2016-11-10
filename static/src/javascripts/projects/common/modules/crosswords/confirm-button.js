@@ -1,18 +1,25 @@
 define([
     'react',
-    'classnames',
     'lodash/objects/assign'
 ], function (
     React,
-    classNames,
     assign
 ) {
     var ConfirmButton = React.createClass({
+
         getInitialState: function () {
             this.timeout = this.props.timeout || 2000;
             return {
                 confirming: false
             };
+        },
+
+        classNames : function(props) {
+            var out = [];
+            for(var f in props){
+                if(props[f] === true) { out.push(f); }
+            }
+            return out.join(" ");
         },
 
         confirm: function () {
@@ -37,18 +44,11 @@ define([
             var inner = this.state.confirming ?
                 'Confirm ' + this.props.text.toLowerCase() : this.props.text;
 
-            var classes = {};
-            var className = classNames((
-                classes['crossword__controls__button--confirm'] = this.state.confirming,
-                classes[this.props.className] = true,
-                classes
-            ));
-
             return React.createElement(
                 'button',
                 assign({}, this.props, {
                     onClick: this.confirm,
-                    className: className
+                    className: 'crossword__controls__button--confirm'
                 }, this),
                 inner
             );
