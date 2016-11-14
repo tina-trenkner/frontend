@@ -15,7 +15,7 @@ import play.api.mvc.EssentialFilter
 import play.api.routing.Router
 import play.api._
 import services.ConfigAgentLifecycle
-import jobs.CommercialClientSideLoggingLifecycle
+import jobs.{CommercialClientSideLoggingLifecycle, CommercialLogsRepairJob}
 import router.Routes
 
 class AppLoader extends FrontendApplicationLoader {
@@ -34,12 +34,13 @@ trait AppComponents extends FrontendComponents with AdminJobsControllers with Ad
   lazy val healthCheck = wire[HealthCheck]
 
   override lazy val lifecycleComponents = List(
-    wire[LogstashLifecycle],
-    wire[ConfigAgentLifecycle],
-    wire[CloudWatchMetricsLifecycle],
-    wire[SwitchboardLifecycle],
-    wire[CachedHealthCheckLifeCycle],
-    wire[CommercialClientSideLoggingLifecycle]
+//    wire[LogstashLifecycle],
+//    wire[ConfigAgentLifecycle],
+//    wire[CloudWatchMetricsLifecycle],
+//    wire[SwitchboardLifecycle],
+//    wire[CachedHealthCheckLifeCycle],
+//    wire[CommercialClientSideLoggingLifecycle],
+    wire[CommercialLogsRepairJob]
   )
 
   lazy val router: Router = wire[Routes]

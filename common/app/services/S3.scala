@@ -34,6 +34,9 @@ trait S3 extends Logging {
 
       val request = new GetObjectRequest(bucket, key)
       val result = client.getObject(request)
+
+      println(s"key is :$key")
+      println(s"bucket is :$bucket")
       log.info(s"S3 got ${result.getObjectMetadata.getContentLength} bytes from ${result.getKey}")
 
       // http://stackoverflow.com/questions/17782937/connectionpooltimeoutexception-when-iterating-objects-in-s3
@@ -66,6 +69,7 @@ trait S3 extends Logging {
   }
 
   def get(key: String)(implicit codec: Codec): Option[String] = withS3Result(key) {
+        println(s"here is the key $key")
     result => Source.fromInputStream(result.getObjectContent).mkString
   }
 

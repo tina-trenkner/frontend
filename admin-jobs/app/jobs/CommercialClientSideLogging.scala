@@ -58,14 +58,14 @@ class CommercialClientSideLoggingLifecycle(
     jobs.deschedule("CommercialClientSideUploadJob")
 
     // 5 minutes between each log write.
-    jobs.scheduleEveryNMinutes("CommercialClientSideLoggingJob", 5) {
-      writeReportsFromRedis(akkaAsync)
-    }
-
-    // 15 minutes between each log upload.
-    jobs.scheduleEveryNMinutes("CommercialClientSideUploadJob", 15) {
-      uploadReports(akkaAsync)
-    }
+//    jobs.scheduleEveryNMinutes("CommercialClientSideLoggingJob", 5) {
+//      writeReportsFromRedis(akkaAsync)
+//    }
+//
+//    // 15 minutes between each log upload.
+//    jobs.scheduleEveryNMinutes("CommercialClientSideUploadJob", 15) {
+//      uploadReports(akkaAsync)
+//    }
   }
 
   private def writeReportsFromRedis(akkaAsync: AkkaAsync): Future[Unit] = Future {
