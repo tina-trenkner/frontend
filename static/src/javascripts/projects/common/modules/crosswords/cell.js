@@ -1,25 +1,19 @@
 define([
     'react',
     './helpers',
-    './constants'
+    './constants',
+    './classNames'
 ], function (
     React,
     helpers,
-    constants
+    constants,
+    classNames
 ) {
     var Cell = React.createClass({
 
         onClick: function (event) {
             event.preventDefault();
             this.props.handleSelect(this.props.x, this.props.y);
-        },
-
-        classNames : function(props) {
-            var out = [];
-            for(var f in props){
-                if(props[f] === true) { out.push(f); }
-            }
-            return out.join(' ');
         },
 
         render: function () {
@@ -42,7 +36,7 @@ define([
                     x: left + constants.cellSize * .5,
                     y: top + constants.cellSize * .675,
                     key: 'entry',
-                    className: this.classNames({
+                    className: classNames({
                         'crossword__cell-text': true,
                         'crossword__cell-text--focussed': this.props.isFocussed,
                         'crossword__cell-text--error': this.props.isError
@@ -58,7 +52,7 @@ define([
                     y: top,
                     width: constants.cellSize,
                     height: constants.cellSize,
-                    className: this.classNames({
+                    className: classNames({
                         'crossword__cell': true,
                         'crossword__cell--focussed': this.props.isFocussed,
                         'crossword__cell--highlighted': this.props.isHighlighted

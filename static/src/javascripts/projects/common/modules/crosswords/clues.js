@@ -2,24 +2,17 @@ define([
     'react',
     'bean',
     'fastdom',
+    './classNames',
     'common/utils/detect',
     'common/utils/scroller',
     'lodash/collections/map',
     'lodash/collections/filter',
     'common/utils/chain'
-], function (React, bean, fastdom, detect, scroller, map, filter, chain) {
+], function (React, bean, fastdom, classNames, detect, scroller, map, filter, chain) {
     var Clue = React.createClass({
 
         onClick: function () {
             this.props.setReturnPosition();
-        },
-
-        classNames : function(props) {
-            var out = [];
-            for(var f in props){
-                if(props[f] === true) { out.push(f); }
-            }
-            return out.join(' ');
         },
 
         render: function () {
@@ -28,7 +21,7 @@ define([
                 React.createElement('a', {
                         href: '#' + this.props.id,
                         onClick: this.onClick,
-                        className: this.classNames({
+                        className: classNames({
                             'crossword__clue': true,
                             'crossword__clue--answered': this.props.hasAnswered,
                             'crossword__clue--selected': this.props.isSelected,

@@ -14,13 +14,6 @@ define([
             };
         },
 
-        classNames : function(props) {
-            var out = [];
-            for(var f in props){
-                if(props[f] === true) { out.push(f); }
-            }
-            return out.join(' ');
-        },
 
         confirm: function () {
             if (this.state.confirming) {

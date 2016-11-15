@@ -3,6 +3,7 @@ define([
     './helpers',
     './constants',
     './cell',
+    './classNames',
     'lodash/collections/forEach',
     'lodash/arrays/range',
     'lodash/collections/map',
@@ -12,6 +13,7 @@ define([
     helpers,
     constants,
     Cell,
+    classNames,
     forEach,
     range,
     map,
@@ -90,14 +92,6 @@ define([
             }
         },
 
-        classNames : function(props) {
-            var out = [];
-            for(var f in props){
-                if(props[f] === true) { out.push(f); }
-            }
-            return out.join(' ');
-        },
-
         render: function () {
             var width = helpers.gridSize(this.props.columns);
             var height = helpers.gridSize(this.props.rows);
@@ -128,7 +122,7 @@ define([
             return React.createElement(
                 'svg', {
                     viewBox: '0 0 ' + width + ' ' + height,
-                    className: this.classNames({
+                    className: classNames({
                         'crossword__grid': true,
                         'crossword__grid--focussed': !!this.props.focussedCell
                     })
