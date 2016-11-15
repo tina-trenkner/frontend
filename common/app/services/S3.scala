@@ -80,10 +80,12 @@ trait S3 extends Logging {
 
       var buffer: Array[Byte] = new Array[Byte](4096)
 
-      var n = 0;
-      while (-1 != (n = bzIn.read(buffer))) {
+      var n = 0
+
+      while (-1 != n) {
+         n = bzIn.read(buffer)
           //out.write(buffer, 0, n);
-         val stringbuf = new String(buffer.map(_.toChar))
+         val stringbuf = new String(buffer.slice(0, n).map(_.toChar))
          println(stringbuf)
       }
       ""
