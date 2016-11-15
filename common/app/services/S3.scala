@@ -2,6 +2,7 @@ package services
 
 import java.io._
 import java.util.zip.GZIPOutputStream
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
@@ -59,7 +60,7 @@ trait S3 extends Logging {
         val errorMsg = s"Unable to fetch S3 object (key: $key)"
         val hintMsg =   "Hint: your AWS credentials might be missing or expired. You can fetch new ones using Janus."
         log.error(errorMsg, e)
-        println(errorMsg + " \n" + hintMsg)
+        println(e.getMessage + " \n" + hintMsg)
         None
       }
       case e: Exception => {
@@ -69,8 +70,24 @@ trait S3 extends Logging {
   }
 
   def get(key: String)(implicit codec: Codec): Option[String] = withS3Result(key) {
-        println(s"here is the key $key")
-    result => Source.fromInputStream(result.getObjectContent).mkString
+        //println(s"here is the key $key")
+    result => {
+
+
+      val bzIn: BZip2CompressorInputStream  = new BZip2CompressorInputStream(result.getObjectContent)
+
+      //Source.fromInputStream(bzIn).mkString
+
+      val buffer: Array[Byte] = new Array[Byte](4096)
+
+      var n = 0;
+      while (-1 != (n = bzIn.read(buffer))) {
+          //out.write(buffer, 0, n);
+         val stringbuf = new String(buffer.map(_.toChar))
+         println(stringbuf)
+      }
+      ""
+    }
   }
 
 
