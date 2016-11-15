@@ -78,7 +78,7 @@ trait S3 extends Logging {
 
       //Source.fromInputStream(bzIn).mkString
 
-      val buffer: Array[Byte] = new Array[Byte](4096)
+      var buffer: Array[Byte] = new Array[Byte](4096)
 
       var n = 0;
       while (-1 != (n = bzIn.read(buffer))) {
