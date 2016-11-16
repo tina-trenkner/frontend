@@ -20,18 +20,22 @@
 
                 @defining(layout.Front.fromPressedPage(faciaPage, Edition(request)).containers) { collections =>
 
-                    @collections.map { containerDefinition =>
-                        @fragments.containers.facia_cards.container(
-                            containerDefinition,
-                            faciaPage.frontProperties,
-                            Some(faciaPage.id),
-                            isAdFeature,
-                            faciaPage.collections.find {
-                                _.id == containerDefinition.dataId
-                            }.map {
-                                ContainerModel.fromPressedCollection(Edition(request))
-                            }
-                        )
+                    @collections.zipWithIndex.map { case (containerDefinition, index) =>
+                        @if(index == 1) {
+                            @fragments.containers.fiveADay.thrasher()
+                        } else {
+                            @fragments.containers.facia_cards.container(
+                                containerDefinition,
+                                faciaPage.frontProperties,
+                                Some(faciaPage.id),
+                                isAdFeature,
+                                faciaPage.collections.find {
+                                    _.id == containerDefinition.dataId
+                                }.map {
+                                    ContainerModel.fromPressedCollection(Edition(request))
+                                }
+                            )
+                        }
                     }
 
                     @defining(layout.Front.makeLinkedData(faciaPage.metadata.url, collections)) { linkedData =>
