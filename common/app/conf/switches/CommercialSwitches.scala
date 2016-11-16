@@ -11,7 +11,7 @@ trait CommercialSwitches {
     "commercial",
     "If this switch is OFF, no calls will be made to the ad server. BEWARE!",
     owners = Seq(Owner.withName("commercial team")),
-    safeState = On,
+    safeState = Off,
     sellByDate = never,
     exposeClientSide = true
   )

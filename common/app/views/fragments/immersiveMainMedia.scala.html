@@ -21,6 +21,11 @@
         ),
         "content", "content--immersive", "content--immersive-article", "tonal", s"tonal--${toneClass(page.item)}")
     ">
+        <div class="gs-container five-logo-container">
+            <div class="content__main-column">
+                <svg width="172" height="80" viewBox="0 0 344 160" xmlns="http://www.w3.org/2000/svg"><title>Tab</title><g transform="translate(0 -2)" fill="none" fill-rule="evenodd"><path fill="#FFCF3A" d="M0 0h344v162H0z"/><text font-family="DS1DisplaySansThin, DS1 Display Sans Thin" font-size="72" font-style="condensed" letter-spacing="-.8" fill="#333"><tspan x="160" y="102">a day</tspan></text><text font-family="DS6DisplaySansBold, DS6 Display Sans Bold" font-size="72" font-weight="bold" letter-spacing="-.8" fill="#333"><tspan x="62" y="104">5</tspan></text><circle stroke="#333" stroke-width="2" cx="81" cy="82" r="60"/></g></svg>
+            </div>
+        </div>
         <div class="gs-container immersive-main-media__logo">
             @if(page.item.elements.hasMainMedia || page.item.fields.main.nonEmpty) {
                 <a href="@LinkTo {/}">
