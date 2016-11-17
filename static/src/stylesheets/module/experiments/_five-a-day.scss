@@ -55,5 +55,13 @@ $_five_logo_base_height: 100%;
 
     li {
         display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 19%;
+        padding: 0 10px;
+    }
+
+    img {
+        display: block;
     }
 }
