@@ -15,7 +15,7 @@ $_five_logo_base_height: 100%;
 }
 
 .five-sidebar {
-    background: #fff;
+    background: #ffffff;
     border-top: 2px solid $comment-support-3;
     padding-bottom: $gs-baseline * 2;
 
@@ -86,19 +86,19 @@ $_five_logo_base_height: 100%;
 }
 
 .five-thrasher {
-    background: #fff;
+    background: #ffffff;
 
     .five-daily-dose {
 
-      left: 190px;
-      top: 20px;
+      left: 24px;
+      top: 88px;
       position: absolute;
       width: 276px;
       height: 86px;
 
       svg {
       width: auto;
-      height: 30%;
+      height: 100%;
       display: block;
     }
 }
@@ -111,7 +111,7 @@ $_five_logo_base_height: 100%;
     .five-dotted-line {
       position: absolute;
       z-index: 5;
-      padding: 70px 0px 0px 50px;
+      padding: 70px 0px 0px 40px;
     }
 
     .five-kicker {
@@ -144,8 +144,12 @@ $_five_logo_base_height: 100%;
 
         .five-logo {
             width: auto;
-            height: 100%;
+            height: 120%;
         }
+    }
+
+    ul {
+      padding-left: 204px;
     }
 
     li {
