@@ -66,16 +66,16 @@ $_five_logo_base_height: 100%;
 .five-thrasher {
     background: $neutral-6;
 
+    .five-tick {
+      display: none;
+    }
+
     .five-kicker {
       font-family: $f-serif-headline;
       font-weight: 800;
       color: $neutral-1;
       font-size: 20px;
       line-height: 20px;
-    }
-
-    .five-tick {
-      display: none;
     }
 
     .five-divider {
@@ -106,8 +106,11 @@ $_five_logo_base_height: 100%;
         h3 {
             font-family: $f-serif-headline;
             font-weight: 800;
+            font-size: 20px;
             display: inline;
-            vertical-align: top;
+            position: absolute;
+            margin-top: $gs-baseline / 2;
+            margin-left: $gs-gutter / 2;
         }
     }
 
