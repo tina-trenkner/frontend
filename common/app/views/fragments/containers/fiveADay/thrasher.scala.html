@@ -9,9 +9,11 @@
             <h3>A daily dose of articles chosen just for you</h3>
         </div>
         <div class="five-thrasher__content">
+          <div class="five-daily-dose">@fragments.inlineSvg("daily_dose", "five")</div>
             <ul>
                 @getItems.map { item =>
                     <a class="js-five-a-day-item" href="@item.articleUrl" >
+                        <div class="five-dotted-line">@fragments.inlineSvg("line_bg", "five")</div>
                         <li>
                             @fragments.inlineSvg("Tick_288x288", "five", Seq("five-tick"))
                             <img class="five-sidebar-image"  src="@item.imageSrc" />
