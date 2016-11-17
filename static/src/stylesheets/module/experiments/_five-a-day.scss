@@ -37,4 +37,23 @@ $_five_logo_base_height: 100%;
 
 .five-thrasher {
     background: $neutral-5;
+
+    .fc-container__inner {
+        padding-top: 0;
+    }
+
+    .five-logo {
+        width: $_five_logo_base_width / 8;
+        height: $_five_logo_base_height / 8;
+    }
+
+    .five-thrasher__header {
+        h3 {
+            display: inline;
+        }
+    }
+
+    li {
+        display: inline-block;
+    }
 }

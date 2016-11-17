@@ -1,7 +1,24 @@
 @()
 
+@import views.support.FiveADayHelpers.getItems
+
 <section class="fc-container five-thrasher">
     <div class="fc-container__inner">
-        @fragments.containers.fiveADay.logo()
+        <div class="five-thrasher__header">
+            @fragments.containers.fiveADay.logo()
+            <h3>A daily dose of articles chosen just for you</h3>
+        </div>
+        <div class="five-thrasher__content">
+            <ul>
+                @getItems.map { item =>
+                    <a href="@item.articleUrl">
+                        <li>
+                            <img class="five-sidebar-image"  src="@item.imageSrc" />
+                            <span class="five-kicker">@item.kicker</span> / <span class="five-standfirst">@item.standfirst</span>
+                        </li>
+                    </a>
+                }
+            </ul>
+        </div>
     </div>
 </section>
