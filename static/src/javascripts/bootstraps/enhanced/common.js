@@ -357,6 +357,12 @@ define([
                 }
             });
 
+            var observer = new IntersectionObserver(function() {
+                $('.js-five-a-day-item[href="'+window.location.pathname+'"]').addClass('five-is-viewed-transition');
+            }, {threshold: 1});
+
+            observer.observe(document.querySelector('.five-thrasher'));
+
             forEach(robust.makeBlocks([
 
                 // Analytics comes at the top. If you think your thing is more important then please think again...
