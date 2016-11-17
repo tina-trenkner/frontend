@@ -166,6 +166,14 @@ $_five_logo_base_height: 100%;
 
     a {
         color: $neutral-1;
+
+        &:hover {
+            text-decoration: none;
+
+            .five-kicker {
+                text-decoration: underline;
+            }
+        }
     }
 
     .five-tick {
