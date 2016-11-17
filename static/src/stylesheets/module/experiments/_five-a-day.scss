@@ -9,8 +9,8 @@ $_five_logo_base_height: 100%;
     }
 
     .five-logo {
-        width: $_five_logo_base_width / 1.25;
-        height: $_five_logo_base_height / 1.25;
+        width: $_five_logo_base_width / 1.5;
+        height: $_five_logo_base_height / 1.5;
     }
 }
 
@@ -103,6 +103,16 @@ $_five_logo_base_height: 100%;
       }
     }
 
+    .five-cta {
+      position: absolute;
+      top: 272px;
+
+      svg {
+        width: 200px;
+        height: auto;
+      }
+    }
+
 
     .five-dotted-line {
       position: absolute;
@@ -185,11 +195,11 @@ $_five_logo_base_height: 100%;
 
     .five-tick {
         position: absolute;
-        top: 12px;
-        left: 33px;
+        top: 13px;
+        left: 34px;
 
          svg {
-             width: 127px;
+             width: 126px;
              height: auto;
          }
     }

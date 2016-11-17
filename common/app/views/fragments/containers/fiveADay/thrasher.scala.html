@@ -9,6 +9,7 @@
         </div>
         <div class="five-thrasher__content">
           <div class="five-daily-dose">@fragments.inlineSvg("daily_dose", "five")</div>
+          <div class="five-cta">@fragments.inlineSvg("CTA", "five")</div>
             <ul>
                 @getItems.map { item =>
                     <a class="js-five-a-day-item" href="@item.articleUrl" >
