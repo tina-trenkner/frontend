@@ -65,6 +65,17 @@ $_five_logo_base_height: 100%;
     li {
         position: relative;
     }
+
+    .five-tick {
+        position: absolute;
+        top: 7px;
+        left: 18px;
+
+        svg {
+            width: 73px;
+            height: auto;
+        }
+    }
 }
 
 .five-thrasher {
@@ -151,8 +162,6 @@ $_five_logo_base_height: 100%;
     }
 
     .five-tick {
-        display: none;
-
         position: absolute;
         top: 15px;
         left: 26px;
@@ -164,6 +173,9 @@ $_five_logo_base_height: 100%;
     }
 }
 
+.five-tick {
+    display: none;
+}
 
 .five-is-viewed .five-tick {
     display: block !important;
