@@ -193,9 +193,7 @@ define([
                     history.logSummary(config.page);
                 }
 
-                if (config.page.contentType === 'Video') {
-                    history.logHistory(config.page);
-                }
+                history.logHistory(config.page);
             },
 
             showHistoryInMegaNav: function () {
@@ -349,6 +347,16 @@ define([
         };
     return {
         init: function () {
+            var fiveADayItems = $('.js-five-a-day-item');
+            var articlesViewed = history.test.getHistory().map(function(x) { return x[0]; });
+
+            fiveADayItems.each(function(el) {
+                var url = el.href.match(/http:\/\/localhost:\d*\/(.*)/)[1];
+                if (articlesViewed.indexOf(url) > -1) {
+                    $(el).addClass('five-is-viewed');
+                }
+            });
+
             forEach(robust.makeBlocks([
 
                 // Analytics comes at the top. If you think your thing is more important then please think again...
