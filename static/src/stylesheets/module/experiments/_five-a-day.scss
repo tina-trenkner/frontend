@@ -14,12 +14,6 @@ $_five_logo_base_height: 100%;
     }
 }
 
-.five-is-viewed {
-    li {
-        background: $neutral-3;
-    }
-}
-
 .five-sidebar {
     background: $neutral-6;
     border-top: 2px solid $comment-support-3;
@@ -60,6 +54,10 @@ $_five_logo_base_height: 100%;
 
     a {
         color: #333;
+    }
+
+    li {
+        position: relative;
     }
 }
 
@@ -117,6 +115,7 @@ $_five_logo_base_height: 100%;
         box-sizing: border-box;
         width: 19%;
         padding: 0 10px;
+        position: relative;
     }
 
     img {
@@ -127,4 +126,22 @@ $_five_logo_base_height: 100%;
     a {
         color: $neutral-1;
     }
+
+    .five-tick {
+        display: none;
+
+        position: absolute;
+        top: 15px;
+        left: 26px;
+
+         svg {
+             width: 144px;
+             height: auto;
+         }
+    }
+}
+
+
+.five-is-viewed .five-tick {
+    display: block !important;
 }
