@@ -1,5 +1,5 @@
-$_five_logo_base_width: 344px;
-$_five_logo_base_height: 160px;
+$_five_logo_base_width: 100%;
+$_five_logo_base_height: 100%;
 
 .five-logo-container {
     z-index: 100;
@@ -9,17 +9,25 @@ $_five_logo_base_height: 160px;
     }
 
     .five-logo {
-        width: $_five_logo_base_width / 2;
-        height: $_five_logo_base_height / 2;
+        width: $_five_logo_base_width / 1.25;
+        height: $_five_logo_base_height / 1.25;
     }
 }
 
 .five-sidebar {
-    background: $neutral-5;
+    background: $neutral-6;
 
     .five-logo {
-        width: $_five_logo_base_width / 4;
-        height: $_five_logo_base_height / 4;
+        width: $_five_logo_base_width / 2;
+        height: $_five_logo_base_height / 2;
+    }
+
+    .ul {
+      
+    }
+
+    .sidebar-image {
+      width: 80px;
     }
 }
 
