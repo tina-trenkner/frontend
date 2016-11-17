@@ -359,7 +359,7 @@ define([
 
             var observer = new IntersectionObserver(function() {
                 $('.js-five-a-day-item[href="'+window.location.pathname+'"]').addClass('five-is-viewed-transition');
-            }, {threshold: 1});
+            }, {threshold: 0.4});
 
             observer.observe(document.querySelector('.five-thrasher'));
 
