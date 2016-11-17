@@ -22,12 +22,16 @@ $_five_logo_base_height: 100%;
         height: $_five_logo_base_height / 2;
     }
 
-    .ul {
-      
+    .five-sidebar-image {
+      width: 80px;
     }
 
-    .sidebar-image {
-      width: 80px;
+    .five-kicker {
+      font-family: $f-serif-headline;
+      font-weight: 800;
+      color: $neutral-1;
+      font-size: 16px;
+      line-height: 16px;
     }
 }
 
