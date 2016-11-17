@@ -58,10 +58,34 @@ $_five_logo_base_height: 100%;
 }
 
 .five-thrasher {
-    background: $neutral-5;
+    background: $neutral-6;
+
+    .five-kicker {
+      font-family: $f-serif-headline;
+      font-weight: 800;
+      color: $neutral-1;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .five-tick {
+      display: none;
+    }
+
+    .five-divider {
+      color: $neutral-3;
+    }
+
+    .five-standfirst {
+      font-family: $f-serif-headline;
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 20px;
+    }
 
     .fc-container__inner {
         padding-top: 0;
+        border-top: 2px solid $comment-support-3 !important;
     }
 
 
@@ -74,6 +98,8 @@ $_five_logo_base_height: 100%;
         }
 
         h3 {
+            font-family: $f-serif-headline;
+            font-weight: 800;
             display: inline;
             vertical-align: top;
         }
@@ -89,9 +115,10 @@ $_five_logo_base_height: 100%;
 
     img {
         display: block;
+        margin-bottom: $gs-baseline / 2;
     }
 
     a {
-        color: #333;
+        color: $neutral-1;
     }
 }

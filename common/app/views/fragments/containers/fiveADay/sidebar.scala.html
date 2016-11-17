@@ -7,7 +7,7 @@
 
     <ul class="five-list">
         @getItems.map { item =>
-            <a href="@item.articleUrl">
+            <a class="five-is-viewed" href="@item.articleUrl">
                 <li class="u-cf" href="@item.articleUrl">
                     <img class="five-sidebar-image"  src="@item.imageSrc" />
                     <span class="five-kicker">@item.kicker</span>

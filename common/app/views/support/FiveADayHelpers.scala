@@ -20,9 +20,9 @@ object FiveADayHelpers {
     ),
     FiveADayItem(
       Static("images/five/person-one/sidebar_number_3.png"),
-      "/music/2016/nov/11/the-future-50-the-rising-stars-to-look-out-for",
-      "The future 50",
-      "The rising music stars to look out for"
+      "/world/2016/nov/16/canada-oil-pipeline-expansion-killer-whales-kinder-morgan",
+      "Big oil v orcas",
+      "Canadians fight pipeline that threatens killer whales on the brink"
     ),
     FiveADayItem(
       Static("images/five/person-one/sidebar_number_4.png"),

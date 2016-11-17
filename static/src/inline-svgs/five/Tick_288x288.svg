@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="288px" height="288px" viewBox="0 0 288 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_homefront-Copy" transform="translate(-173.000000, -2362.000000)">
+            <g id="5-a-day---bottom" transform="translate(-5.000000, 2145.000000)">
+                <g id="Tick" transform="translate(178.000000, 217.000000)">
+                    <circle id="Mask" fill-opacity="0.5" fill="#FFCF3A" cx="144" cy="144" r="144"></circle>
+                    <text id="" font-family="GuardianIcons-Regular, Guardian Icons" font-size="144" font-weight="normal" letter-spacing="-1.60000002" fill="#333333">
+                        <tspan x="72" y="188"></tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
