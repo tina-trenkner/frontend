@@ -5,11 +5,13 @@
 <nav class="five-sidebar">
     @fragments.containers.fiveADay.logo()
 
-    <ul>
+    <ul class="five-list">
         @getItems.map { item =>
-            <li href="@item.articleUrl">
+            <li class="u-cf" href="@item.articleUrl">
                 <img class="five-sidebar-image"  src="@item.imageSrc" />
-                <span class="five-kicker">@item.kicker</span> / <span class="five-standfirst">@item.standfirst</span>
+                <span class="five-kicker">@item.kicker</span>
+                <span class="five-divider">/</span> 
+                <span class="five-standfirst">@item.standfirst</span>
             </li>
         }
     </ul>
