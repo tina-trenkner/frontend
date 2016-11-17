@@ -1,29 +1,16 @@
 @()
 
-@import conf.Static
-
-@item(imageSrc: String, articleUrl: String, kicker: String, standfirst: String) = {
-    <li>
-        <img src="@imageSrc" />
-        <bold>@kicker</bold> / @standfirst
-    </li>
-}
+@import views.support.FiveADayHelpers.getItems
 
 <nav class="five-sidebar">
     @fragments.containers.fiveADay.logo()
 
     <ul>
-        @item(
-            Static("images/five/person-one/sidebar_number_1.png"),
-            "url",
-            "Arrival Review",
-            "Amy Adams has a sublime word with alien visitors"
-        )
-        @item(
-            Static("images/five/person-one/sidebar_number_1.png"),
-            "url",
-            "Arrival Review",
-            "Amy Adams has a sublime word with alien visitors"
-        )
+        @getItems.map { item =>
+            <li href="@item.articleUrl">
+                <img src="@item.imageSrc" />
+                <bold>@item.kicker</bold> / @item.standfirst
+            </li>
+        }
     </ul>
 </nav>
