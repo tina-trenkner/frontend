@@ -107,7 +107,12 @@ $_five_logo_base_height: 100%;
     .five-dotted-line {
       position: absolute;
       z-index: 5;
-      padding: 70px 0px 0px 40px;
+      padding: 65px 0px 0px 34px;
+
+      svg {
+          height: 2px;
+          width: auto;
+      }
     }
 
     .five-kicker {
@@ -145,7 +150,8 @@ $_five_logo_base_height: 100%;
     }
 
     ul {
-      padding-left: 204px;
+      padding-left: 192px;
+      margin-top: -48px;
     }
 
     li {
@@ -155,12 +161,13 @@ $_five_logo_base_height: 100%;
         vertical-align: top;
         box-sizing: border-box;
         width: 19%;
-        padding: 0 10px;
+        padding: 0 20px;
         position: relative;
     }
 
     img {
         display: block;
+        width: 140px;
         margin-bottom: $gs-baseline / 2;
     }
 
@@ -178,11 +185,11 @@ $_five_logo_base_height: 100%;
 
     .five-tick {
         position: absolute;
-        top: 15px;
-        left: 26px;
+        top: 12px;
+        left: 33px;
 
          svg {
-             width: 144px;
+             width: 127px;
              height: auto;
          }
     }
