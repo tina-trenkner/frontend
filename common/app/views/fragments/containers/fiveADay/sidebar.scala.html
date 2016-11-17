@@ -8,8 +8,8 @@
     <ul>
         @getItems.map { item =>
             <li href="@item.articleUrl">
-                <img src="@item.imageSrc" />
-                <bold>@item.kicker</bold> / @item.standfirst
+                <img class="five-sidebar-image"  src="@item.imageSrc" />
+                <span class="five-kicker">@item.kicker</span> / <span class="five-standfirst">@item.standfirst</span>
             </li>
         }
     </ul>
