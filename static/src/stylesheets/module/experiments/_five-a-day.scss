@@ -66,6 +66,22 @@ $_five_logo_base_height: 100%;
 .five-thrasher {
     background: $neutral-6;
 
+    .five-daily-dose {
+
+      left: 200px;
+      top: 6px;
+      position: absolute;
+      width: 276px;
+      height: 86px;
+
+      svg {
+      width: auto;
+      height: 30%;
+      display: block;
+    }
+}
+
+
     .five-tick {
       display: none;
     }
@@ -107,16 +123,6 @@ $_five_logo_base_height: 100%;
         .five-logo {
             width: auto;
             height: 100%;
-        }
-
-        h3 {
-            font-family: $f-serif-headline;
-            font-weight: 800;
-            font-size: 20px;
-            display: inline;
-            position: absolute;
-            margin-top: $gs-baseline / 2;
-            margin-left: $gs-gutter / 2;
         }
     }
 
