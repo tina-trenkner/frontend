@@ -70,6 +70,12 @@ $_five_logo_base_height: 100%;
       display: none;
     }
 
+    .five-dotted-line {
+      position: absolute;
+      z-index: 5;
+      padding: 70px 0px 0px 50px;
+    }
+
     .five-kicker {
       font-family: $f-serif-headline;
       font-weight: 800;
@@ -115,6 +121,8 @@ $_five_logo_base_height: 100%;
     }
 
     li {
+        position: relative;
+        z-index: 10;
         display: inline-block;
         vertical-align: top;
         box-sizing: border-box;
