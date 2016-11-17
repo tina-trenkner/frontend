@@ -18,6 +18,12 @@ $_five_logo_base_height: 100%;
     background: $neutral-6;
     border-top: 2px solid $comment-support-3;
 
+    .five-dotted-line {
+      position: absolute;
+      z-index: 5;
+      padding: 70px 0px 0px 50px;
+    }
+
     .five-list {
       margin: 0;
     }
