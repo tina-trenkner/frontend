@@ -1,13 +1,26 @@
+$_five_logo_base_width: 344px;
+$_five_logo_base_height: 160px;
+
 .five-logo-container {
     z-index: 100;
 
     .content__main-column {
         position: absolute;
     }
+
+    .five-logo {
+        width: $_five_logo_base_width / 2;
+        height: $_five_logo_base_height / 2;
+    }
 }
 
-.five-sidebar-header {
+.five-sidebar {
+    background: $neutral-5;
 
+    .five-logo {
+        width: $_five_logo_base_width / 4;
+        height: $_five_logo_base_height / 4;
+    }
 }
 
 .five-thrasher {

@@ -1,3 +1,29 @@
 @()
 
-<h2 class="five-sidebar-header">Sidebar, baby!</h2>
+@import conf.Static
+
+@item(imageSrc: String, articleUrl: String, kicker: String, standfirst: String) = {
+    <li>
+        <img src="@imageSrc" />
+        <bold>@kicker</bold> / @standfirst
+    </li>
+}
+
+<nav class="five-sidebar">
+    @fragments.containers.fiveADay.logo()
+
+    <ul>
+        @item(
+            Static("images/five/person-one/sidebar_number_1.png"),
+            "url",
+            "Arrival Review",
+            "Amy Adams has a sublime word with alien visitors"
+        )
+        @item(
+            Static("images/five/person-one/sidebar_number_1.png"),
+            "url",
+            "Arrival Review",
+            "Amy Adams has a sublime word with alien visitors"
+        )
+    </ul>
+</nav>
