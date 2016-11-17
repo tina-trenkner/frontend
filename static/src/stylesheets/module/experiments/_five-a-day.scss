@@ -17,6 +17,7 @@ $_five_logo_base_height: 100%;
 .five-sidebar {
     background: $neutral-6;
     border-top: 2px solid $comment-support-3;
+    padding-bottom: $gs-baseline * 2;
 
     .five-dotted-line {
       position: absolute;
