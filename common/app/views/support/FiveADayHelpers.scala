@@ -7,34 +7,34 @@ case class FiveADayItem(imageSrc: String, articleUrl: String, kicker: String, st
 object FiveADayHelpers {
   def getItems: Seq[FiveADayItem] = Seq(
     FiveADayItem(
-      Static("images/five/person-one/sidebar_number_1.png"),
+      Static("images/five/melvin-rose/sidebar_number_1.png"),
       "/film/2016/sep/01/arrival-review-amy-adams-denis-villeneuve-alien-contact",
       "Arrival Review",
       "Amy Adams has a sublime word with alien visitors"
     ),
     FiveADayItem(
-      Static("images/five/person-one/sidebar_number_2.png"),
+      Static("images/five/melvin-rose/sidebar_number_2.png"),
       "/lifeandstyle/2016/nov/16/fish-fingers-taste-test-which-get-the-thumbs-up",
       "Taste tests",
       "Which fish fingers gets the thumbs up?"
     ),
     FiveADayItem(
-      Static("images/five/person-one/sidebar_number_3.png"),
-      "/world/2016/nov/16/canada-oil-pipeline-expansion-killer-whales-kinder-morgan",
-      "Big oil v orcas",
-      "Canadians fight pipeline that threatens killer whales on the brink"
+      Static("images/five/melvin-rose/sidebar_number_3.png"),
+      "/music/2016/nov/17/still-kicking-it-a-tribe-called-quest",
+      "A Tribe Called Quest return",
+      "‘You fight for what you love – and you go through hell to get it’"
     ),
     FiveADayItem(
-      Static("images/five/person-one/sidebar_number_4.png"),
-      "/technology/shortcuts/2016/nov/14/mobile-smartphones-health-silly-walk",
-      "The ‘phone walk’",
-      "The next stage in human evolution"
+      Static("images/five/melvin-rose/sidebar_number_4.png"),
+      "/football/blog/2016/nov/18/premier-league-10-things-to-look-out-for-this-weekend",
+      "Premier League’",
+      "10 things to look out for this weekend"
     ),
     FiveADayItem(
-      Static("images/five/person-one/sidebar_number_5.png"),
-      "/us-news/2016/nov/16/facebook-bias-bubble-us-election-conservative-liberal-news-feed",
-      "Bursting the Facebook bubble",
-      "What happens when voters on the left and right swap feeds?"
+      Static("images/five/melvin-rose/sidebar_number_5.png"),
+      "/artanddesign/2016/nov/13/design-museum-kensington-new-building-oma-john-pawson-commonwealth",
+      "The Design Museum review",
+      "A magnificent achievement, but…"
     )
   )
 }
