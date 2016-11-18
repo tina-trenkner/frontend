@@ -107,6 +107,10 @@ $_five_logo_base_height: 100%;
       position: absolute;
       top: 272px;
 
+      &:hover {
+          cursor: pointer;
+      }
+
       svg {
         width: 200px;
         height: auto;
