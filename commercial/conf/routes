@@ -52,5 +52,9 @@ GET         /commercial/anx/anxresize.js                                    comm
 
 # Hosted content
 GET         /commercial/advertiser-content/:campaignName/:pageName          commercial.controllers.HostedContentController.renderLegacyHostedPage(campaignName, pageName)
-GET         /advertiser-content/:campaignName/:pageName                     commercial.controllers.HostedContentController.renderHostedPage(campaignName, pageName)
+#GET         /advertiser-content/:campaignName/:pageName                     commercial.controllers.HostedContentController.renderHostedPage(campaignName, pageName)
 GET         /advertiser-content/:campaignName/:pageName/:cType/onward.json  commercial.controllers.HostedContentController.renderOnwardComponent(campaignName, pageName, cType)
+
+
+
+GET         /$path<advertiser-content/[^/]+/[^/]+$>                         commercial.controllers.HostedContentController.renderHostedPage(path)
