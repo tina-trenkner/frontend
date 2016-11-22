@@ -666,22 +666,26 @@ define([
             expect(renderedComponent.state.cellInFocus.x).toBe(1);
             expect(renderedComponent.state.cellInFocus.y).toBe(0);
 
+        });
+
+        it('Moves focus when inserting a charater', function() {
+
+            // focus on 0, 0
+
+            renderedComponent.focusClue(0, 0, 'across');
+
             // insert a character (this should move our focus right again)
 
             renderedComponent.insertCharacter('A');
 
-            expect(renderedComponent.state.cellInFocus.x).toBe(2);
+            expect(renderedComponent.state.cellInFocus.x).toBe(1);
             expect(renderedComponent.state.cellInFocus.y).toBe(0);
 
         });
 
         it('Can move focus with tab keys', function () {
 
-            // focus on 0, 0
-
             renderedComponent.focusClue(0, 0, 'across');
-
-            // press the tab key (moves us to the next clue start cell)
 
             renderedComponent.onKeyDown(
                 {keyCode: 9, shiftKey: false, metaKey: false, ctrlKey: false, altKey: false, preventDefault: function(){} }
@@ -690,7 +694,12 @@ define([
             expect(renderedComponent.state.cellInFocus.x).toBe(0);
             expect(renderedComponent.state.cellInFocus.y).toBe(2);
 
-            // press the shift-tab to move back
+
+        });
+
+        it('Can move focus with shift+tab keys', function () {
+
+            renderedComponent.focusClue(0, 2, 'across');
 
             renderedComponent.onKeyDown(
                 {keyCode: 9, shiftKey: true, metaKey: false, ctrlKey: false, altKey: false, preventDefault: function(){} }
@@ -739,9 +748,7 @@ define([
         });
 
 
-        it('Can set and clear data', function () {
-
-            // single row clear
+        it('Can clear single rows', function () {
 
             renderedComponent.focusClue(0, 0, 'across');
             renderedComponent.insertCharacter('A');
@@ -752,7 +759,9 @@ define([
 
             expect(renderedComponent.getCellValue(0, 0)).toBe('');
 
-            // clear all
+        });
+
+        it('Can clear all', function () {
 
             renderedComponent.focusClue(0, 0, 'across');
             renderedComponent.insertCharacter('A');
@@ -765,9 +774,7 @@ define([
 
         });
 
-        it('Can clear wrong cells on Check', function () {
-
-            // for check this
+        it('Can clear wrong cells on Check row', function () {
 
             renderedComponent.focusClue(0, 0, 'across');
             renderedComponent.insertCharacter('O');
@@ -779,7 +786,9 @@ define([
             expect(renderedComponent.getCellValue(0, 0)).toBe('O');
             expect(renderedComponent.getCellValue(1, 0)).toBe('');
 
-            // for check all
+        });
+
+        it('Can clear wrong cells on Check all', function () {
 
             renderedComponent.focusClue(0, 0, 'across');
             renderedComponent.insertCharacter('O');
