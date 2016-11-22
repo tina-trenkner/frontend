@@ -1,4 +1,4 @@
-define([], function () {
+define(function () {
 
     return function(props) {
         return Object.keys(props)
