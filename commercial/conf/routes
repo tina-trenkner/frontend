@@ -57,4 +57,4 @@ GET         /advertiser-content/:campaignName/:pageName/:cType/onward.json  comm
 
 
 
-GET         /$path<advertiser-content/[^/]+/[^/]+$>                         commercial.controllers.HostedContentController.renderHostedPage(path)
+GET         /$itemId<advertiser-content/[^/]+/[^/]+$>                       commercial.controllers.HostedContentController2.renderHostedPage(itemId)

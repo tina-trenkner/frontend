@@ -21,6 +21,7 @@ trait CommercialControllers {
   lazy val contentApiOffersController = wire[ContentApiOffersController]
   lazy val creativeTestPage = wire[CreativeTestPage]
   lazy val hostedContentController = wire[HostedContentController]
+  lazy val hostedContentController2 = wire[HostedContentController2]
   lazy val jobsController = wire[JobsController]
   lazy val liveEventsController = wire[LiveEventsController]
   lazy val masterclassesController = wire[MasterclassesController]

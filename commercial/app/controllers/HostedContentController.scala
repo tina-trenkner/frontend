@@ -106,21 +106,4 @@ class HostedContentController(contentApiClient: ContentApiClient)
         }
       }
   }
-
-  def renderHostedPage(path: String) = Action.async { implicit request =>
-
-    val capiResponse = {
-      val response = contentApiClient.getResponse(baseQuery(path))
-      response.onFailure {
-        case NonFatal(e) => log.warn(s"Capi lookup of item '$path' failed", e)
-      }
-      response
-    }
-
-    capiResponse map { response =>
-
-      Ok(response.content.get.toString())
-
-    }
-  }
 }
