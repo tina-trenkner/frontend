@@ -1,9 +1,11 @@
 define([
     'react',
-    'lodash/objects/assign'
+    'lodash/objects/assign',
+    './classNames'
 ], function (
     React,
-    assign
+    assign,
+    classNames
 ) {
     var ConfirmButton = React.createClass({
 
@@ -37,11 +39,18 @@ define([
             var inner = this.state.confirming ?
                 'Confirm ' + this.props.text.toLowerCase() : this.props.text;
 
+            var classes = {};
+            var className = classNames((
+                classes['crossword__controls__button--confirm'] = this.state.confirming,
+                    classes[this.props.className] = true,
+                    classes
+            ));
+
             return React.createElement(
                 'button',
                 assign({}, this.props, {
                     onClick: this.confirm,
-                    className: 'crossword__controls__button--confirm'
+                    className: className
                 }, this),
                 inner
             );
